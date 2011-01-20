@@ -1,0 +1,77 @@
+<% content_for :head do %>
+  <%= javascript_include_tag "jquery.hoverIntent.min.js" %>
+  <%= javascript_include_tag "jquery.mb.flipText.js" %>
+  <%= javascript_include_tag "jquery.metadata.js" %>
+  <%= javascript_include_tag "mbExtruder.js" %>
+  <script type="text/javascript">
+  $(function(){
+    $("#extruder-left").buildMbExtruder({
+      position:"left",
+      width:300,
+      sensibility:10,
+      extruderOpacity:.8,
+      hidePanelsOnClose:false,
+      accordionPanels:false,
+      onExtOpen:function(){},
+      onExtContentLoad:function(){$("#extruderLeft").openPanel();},
+      onExtClose:function(){}
+    });
+  });
+  </script>
+
+  <style>
+      /*
+      custom style for extruder
+      */
+
+    .extruder.left.a .flap{
+      font-size:18px;
+      color:white;
+      top:0;
+      padding:10px 0 10px 10px;
+      background:#772B14;
+      width:30px;
+      position:absolute;
+      right:0;
+      -moz-border-radius:0 10px 10px 0;
+      -webkit-border-top-right-radius:10px;
+      -webkit-border-bottom-right-radius:10px;
+      -moz-box-shadow:#666 2px 0px 3px;
+      -webkit-box-shadow:#666 2px 0px 3px;
+    }
+
+    .extruder.left.a .content{
+      border-right:3px solid #772B14;
+    }
+
+    .extruder.top .optionsPanel .panelVoice a:hover{
+      color:#fff;
+      background: url("elements/black_op_30.png");
+      border-bottom:1px solid #000;
+    }
+    .extruder.top .optionsPanel .panelVoice a{
+      border-bottom:1px solid #000;
+    }
+
+    .extruder.left.a .flap .flapLabel{
+      background:#772B14;
+    }
+  </style>
+
+<% end %>
+
+<h2>Extruder Page</h2>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam erat mauris, aliquet non tempus ut, fermentum et dui. Nullam vel diam nibh, ut tincidunt felis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce adipiscing varius placerat. Etiam ut risus at eros rhoncus semper quis id augue. Fusce fermentum leo non urna vestibulum mollis id in tellus. Donec vel mi nec lorem pretium rhoncus eu ac ante. Duis pulvinar pharetra pellentesque. Integer malesuada ornare nisl, et laoreet lectus placerat vitae. Maecenas at accumsan neque. Maecenas in semper augue. In hac habitasse platea dictumst. Phasellus urna ante, dignissim sed lobortis sit amet, gravida a massa.
+</p>
+
+<p>
+Curabitur sed lacus risus, nec sodales neque. Nam mattis dui odio, sit amet dapibus mauris. Vestibulum porta arcu libero, ac dapibus justo. Vestibulum in ipsum sapien. Cras lectus eros, sollicitudin ac ullamcorper ac, convallis in risus. Duis mollis metus eget lacus gravida quis tempus nunc dignissim. Duis quis dui quis tellus semper lobortis a eget tortor. Donec tellus nulla, sodales quis commodo ac, congue id justo. Integer mauris dui, interdum ut porttitor vel, porta sed est. Aenean pulvinar quam quis mauris vulputate tristique. Nullam iaculis dapibus tortor, at faucibus sem sagittis nec. Vivamus ante ligula, varius et dapibus quis, bibendum quis purus. Aenean sed quam sit amet diam consequat facilisis. Nulla pharetra augue vitae dui mattis facilisis.
+</p>
+
+<p>
+Nam nec mi vitae tellus pulvinar viverra vitae et mauris. Mauris sit amet volutpat quam. Mauris suscipit porttitor vehicula. Integer at justo magna, sit amet gravida nibh. Sed elementum aliquam leo sit amet cursus. Praesent faucibus nunc quis dui egestas varius ultricies nunc tempus. Maecenas ut diam eget est luctus dignissim. Vestibulum semper nunc ut augue scelerisque dignissim. Ut velit est, lacinia ut tempor non, tristique quis augue. Maecenas lacinia feugiat dui ac sodales. Aenean mauris urna, ornare rhoncus feugiat id, vestibulum in dolor. Cras ullamcorper dapibus cursus. Nam a leo et lacus suscipit aliquet. Etiam lobortis nibh et velit placerat pellentesque. Praesent vulputate purus risus.
+</p>
+
+<div id="extruder-left" class="{title:'menu', url:'/jquery/extruder_left'}"></div>
